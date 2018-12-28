@@ -34,6 +34,10 @@ replace                        # replace a password by a new one
 passwd                         # change the master password
 ```
 
+# Memory leak verification
+Actually there is no memory leak. 
+Tools uses : **Valgrind**
+
 # Sources
 Here are the source used in this project :  
 kulkarniamit : [link](https://github.com/kulkarniamit/openssl-evp-demo/blob/master/openssl_evp_demo.c) - openssl part  
