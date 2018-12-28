@@ -9,7 +9,7 @@ INC_PATH = include
 
 CC = gcc
 
-C_CC_FLAGS = -Wall -Wextra -g
+C_CC_FLAGS = -Wall -Wextra -g -pedantic
 C_OPTIMISATION_FLAGS = -O3
 C_OPENSSL_FLAGS = -lcrypto -lssl
 C_INC_FLAGS = -I$(INC_PATH)
