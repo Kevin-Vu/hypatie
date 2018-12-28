@@ -8,9 +8,8 @@ This project aims to secure all your personal passwords in one single app, and a
 
 # Getting Started
 ## Installation
-In order to compile this project, please install the following libraries : `openssl` , `libssl-dev`.
-
-```bash
+In order to compile this project, please install the following libraries : **openssl** , **libssl-dev**.
+```c
 sudo apt install openssl libssl-dev
 ```
 
