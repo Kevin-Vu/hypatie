@@ -17,7 +17,7 @@ char* randomString(char charset[], size_t size)
     if (size) {
         --size;
         for (n = 0; n < size; n++) {
-            int key = rand() % strlen(charset);
+            int key = rand() % cstrlen(charset);
             str[n] = charset[key];
         } 
         str[size] = '\0';
