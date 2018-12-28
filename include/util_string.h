@@ -13,6 +13,7 @@
 char * randomString(char charset[], size_t size);
 char * randomAlphaNum(size_t size);
 char * randomAlphaSpecNum(size_t size);
+int cstrlen(char * str);
 
 extern char charsetAlphaNum[];
 extern char charsetAlphaSpecNum[];
