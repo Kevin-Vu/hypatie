@@ -9,8 +9,7 @@ This project aims to secure all your personal passwords in one single app, and a
 # Getting Started
 ## Installation
 In order to compile this project, please install the following libraries : **openssl** , **libssl-dev**.
-```c
-int a;
+```bash
 sudo apt install openssl libssl-dev
 ```
 
@@ -35,12 +34,12 @@ passwd                         # change the master password
 ```
 
 # Memory leak verification
-Actually there is no memory leak. 
-Tools uses : **Valgrind**
+Actually there is no memory leak found. 
+Tools uses : **Valgrind**.
 
 # Sources
 Here are the source used in this project :  
-kulkarniamit : [link](https://github.com/kulkarniamit/openssl-evp-demo/blob/master/openssl_evp_demo.c) - openssl part  
-Yoann Sculo : [link](http://www.yoannsculo.fr/faire-un-hash-md5-dun-string-en-c/) - md5sum part  
-alk : [link](https://stackoverflow.com/questions/17984628/switch-statement-using-string-on-an-array) - switch statement part  
-Lionel Lacassagne : [link](https://www.lip6.fr/actualite/personnes-fiche.php?ident=P1046) - Makefile
+**kulkarniamit** : [link](https://github.com/kulkarniamit/openssl-evp-demo/blob/master/openssl_evp_demo.c) - openssl part  
+**Yoann Sculo** : [link](http://www.yoannsculo.fr/faire-un-hash-md5-dun-string-en-c/) - md5sum part  
+**alk** : [link](https://stackoverflow.com/questions/17984628/switch-statement-using-string-on-an-array) - switch statement part  
+**Lionel Lacassagne** : [link](https://www.lip6.fr/actualite/personnes-fiche.php?ident=P1046) - Makefile
