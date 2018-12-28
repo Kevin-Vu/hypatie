@@ -34,8 +34,8 @@ passwd                         # change the master password
 ```
 
 ## Memory leak verification
-Actually there is no memory leak found. 
-Tools uses : **Valgrind**.
+Actually there is no memory leak found.   
+Tools used : **Valgrind**.
 
 ## Sources
 Here are the source used in this project :  
