@@ -19,6 +19,10 @@ make
 ```
 
 # How to use
+Go to the `exe` folder.
+```
+./hypatie.exe <args>
+```
 Here are the arguments you can pass through the program :
 ```
 new simple|special <length>    # generate a random password
