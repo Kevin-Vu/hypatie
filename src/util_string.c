@@ -11,11 +11,12 @@ char* randomString(char charset[], size_t size)
 /* ----------------------------------------- */
 {
     srand(time(NULL));
+    size_t n = 0;
     char * str = malloc(size * sizeof(char) + 1);
     size++;
     if (size) {
         --size;
-        for (size_t n = 0; n < size; n++) {
+        for (n = 0; n < size; n++) {
             int key = rand() % strlen(charset);
             str[n] = charset[key];
         } 
