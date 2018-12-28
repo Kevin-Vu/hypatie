@@ -36,4 +36,13 @@ char * randomAlphaSpecNum(size_t size)
 {
     return randomString(charsetAlphaSpecNum, size);
 }
+/* ----------------- */
+int cstrlen(char * str)
+/* ----------------- */
+{
+    int ctr = 0;
+    char c;
+    while((c = *str++)) ctr++;
+    return ctr;
+}
 
