@@ -20,7 +20,7 @@ make
 
 ### How to use
 Go to the `exe` folder.
-```bash
+```txt
 ./hypatie.exe <args>
 ```
 Here are the arguments you can pass through the program :
