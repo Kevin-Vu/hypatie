@@ -11,14 +11,16 @@ char* randomString(char charset[], size_t size)
 /* ----------------------------------------- */
 {
     srand(time(NULL));
+    char buf[1024];
+    sprintf(buf, "%s", charset);
     size_t n = 0;
     char * str = malloc(size * sizeof(char) + 1);
     size++;
     if (size) {
         --size;
         for (n = 0; n < size; n++) {
-            int key = rand() % strlen(charset);
-            str[n] = charset[key];
+            int key = rand() % strlen(buf);
+            str[n] = buf[key];
         } 
         str[size] = '\0';
     }
