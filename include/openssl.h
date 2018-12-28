@@ -23,6 +23,7 @@
 #include <unistd.h>
 
 #include "util_file.h"
+#include "util_string.h"
 
 #define ERR_EVP_CIPHER_INIT -1
 #define ERR_EVP_CIPHER_UPDATE -2
