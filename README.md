@@ -1,1 +1,40 @@
-# hypatie
+
+ ___  ___      ___    ___ ________  ________  _________  ___  _______      
+|\  \|\  \    |\  \  /  /|\   __  \|\   __  \|\___   ___\\  \|\  ___ \     
+\ \  \\\  \   \ \  \/  / | \  \|\  \ \  \|\  \|___ \  \_\ \  \ \   __/|    
+ \ \   __  \   \ \    / / \ \   ____\ \   __  \   \ \  \ \ \  \ \  \_|/__  
+  \ \  \ \  \   \/  /  /   \ \  \___|\ \  \ \  \   \ \  \ \ \  \ \  \_|\ \ 
+   \ \__\ \__\__/  / /      \ \__\    \ \__\ \__\   \ \__\ \ \__\ \_______\
+    \|__|\|__|\___/ /        \|__|     \|__|\|__|    \|__|  \|__|\|_______|
+             \|___|/                                                        
+             
+# Hypatie
+### Personal password encryptor
+This project aims to secure all your personal passwords in one single app, and access them with a unique password.
+[![Build Status](https://travis-ci.com/Kevin-Vu/hypatie.svg?branch=master)](https://travis-ci.com/Kevin-Vu/hypatie)
+
+----
+
+# Getting Started
+## Installation
+In order to compile this project, please install the following libraries : `openssl` , `libssl-dev`.
+
+```bash
+sudo apt install openssl libssl-dev
+```
+
+## Compile the project
+```bash
+make
+```
+
+# How to use
+Here are the arguments you can pass through the program :
+```bash
+   new simple|special <length>    # generate a random password
+   read                           # print a password
+   add                            # add a new password
+   rm                             # remove a password
+   replace                        # replace a password by a new one
+   passwd                         # change the master password
+```
