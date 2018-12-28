@@ -20,11 +20,11 @@ make
 
 # How to use
 Here are the arguments you can pass through the program :
-```bash
-   new simple|special <length>    # generate a random password
-   read                           # print a password
-   add                            # add a new password
-   rm                             # remove a password
-   replace                        # replace a password by a new one
-   passwd                         # change the master password
+```
+new simple|special <length>    # generate a random password
+read                           # print a password
+add                            # add a new password
+rm                             # remove a password
+replace                        # replace a password by a new one
+passwd                         # change the master password
 ```
