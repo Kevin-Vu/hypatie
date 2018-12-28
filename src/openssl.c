@@ -206,8 +206,8 @@ char * md5_hash_from_file(const char * filename)
     }
 
     MD5_Final(md5, &c);
-
-    for (int i = 0; i < MD5_DIGEST_LENGTH; i++)
+    int i = 0;
+    for (i = 0; i < MD5_DIGEST_LENGTH; i++)
         sprintf(md5_hash + 2*i, "%02x", md5[i]);
     fclose(fp);
     return md5_hash;
@@ -216,10 +216,11 @@ char * md5_hash_from_file(const char * filename)
 char * md5_hash_from_string(char *str)
 /* -------------------------------- */
 {
+    int i = 0;
     char unsigned md5[MD5_DIGEST_LENGTH] = {0};
     char * md5_hash = (char *) malloc( (2*MD5_DIGEST_LENGTH+1) * sizeof(char));
     MD5((const unsigned char *)str, strlen(str), md5);
-    for (int i = 0; i < MD5_DIGEST_LENGTH; i++)
+    for (i = 0; i < MD5_DIGEST_LENGTH; i++)
         sprintf(md5_hash + 2*i, "%02x", md5[i]);
     return md5_hash;
 }
@@ -227,9 +228,10 @@ char * md5_hash_from_string(char *str)
 char * sha256_hash_from_string(char * str)
 /* ------------------------------------ */
 {
+    int i = 0;
     unsigned char *sha = SHA256((const unsigned char *)str, strlen(str), 0);
     char * sha256_hash = (char *) malloc( (2*SHA256_DIGEST_LENGTH+1) * sizeof(char));
-    for (int i = 0; i < SHA256_DIGEST_LENGTH; i++)
+    for (i = 0; i < SHA256_DIGEST_LENGTH; i++)
         sprintf(sha256_hash + 2*i, "%02x", sha[i]);
     return sha256_hash;
 }

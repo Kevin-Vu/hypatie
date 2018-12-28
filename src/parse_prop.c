@@ -4,15 +4,17 @@
 P_PROP * P_PROParray(int n)
 /* --------------------- */
 {
+    int i = 0;
     P_PROP * p = malloc(n * sizeof(PROP));
-    for(int i = 0; i < n; i++) p[i] = malloc(sizeof(PROP));
+    for(i = 0; i < n; i++) p[i] = malloc(sizeof(PROP));
     return p; 
 }
 /* ---------------------------------- */
 void free_P_PROParray(P_PROP * p, int n)
 /* ---------------------------------- */
 {
-    for(int i = 0; i < n; i++) free(p[i]);
+    int i = 0;
+    for(i = 0; i < n; i++) free(p[i]);
     free(p);
 }
 /* --------------------------------------------- */
@@ -63,7 +65,8 @@ P_CONT getContent(P_PROP *p, int length, int lno)
 void displayArrayP_PROP(P_PROP * p, int l)
 /* ------------------------------------ */
 {
-	for(int i = 0; i < l; i++) 
+    int i = 0;
+	for(i = 0; i < l; i++) 
 		printf("key : %s - value : %s - email : %s \n", 
 			   p[i] -> key, p[i] -> value, p[i] -> email );
 }
@@ -71,6 +74,7 @@ void displayArrayP_PROP(P_PROP * p, int l)
 void displayKeyP_PROP(P_PROP * p, int l)
 /* ---------------------------------- */
 {
-    for(int i = 0; i < l; i++) 
+    int i = 0;
+    for(i = 0; i < l; i++) 
         printf("| %-25.25s | %-25.25s | [%3d]  |\n", p[i] -> key, p[i] -> email, i);
 }
