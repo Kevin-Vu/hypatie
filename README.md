@@ -1,7 +1,8 @@
 # Hypatie
 ### Personal password encryptor
 This project aims to secure all your personal passwords in one single app, and access them with a unique password.
-[![Build Status](https://travis-ci.com/Kevin-Vu/hypatie.svg?branch=master)](https://travis-ci.com/Kevin-Vu/hypatie)
+
+[![Build Status](https://travis-ci.com/Kevin-Vu/hypatie.svg?branch=master)](https://travis-ci.com/Kevin-Vu/hypatie) [![Version](https://img.shields.io/badge/hypatie-v1.0-blue.svg)
 
 ----
 
