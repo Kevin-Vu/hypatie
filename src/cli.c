@@ -27,6 +27,7 @@ void printHelp()
     puts("  add                            add a new password");
     puts("  rm                             remove a password");
     puts("  replace                        replace a password by a new one");
+    puts("  passwd                         change the master password");
     puts("");
 }
 /* --------------------------------------------------------------------------------------------------------- */
