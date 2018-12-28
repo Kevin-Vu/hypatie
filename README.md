@@ -35,7 +35,7 @@ passwd                         # change the master password
 ```
 
 # Sources
-This project uses many sources :
+This project uses many sources :  
 kulkarniamit : [link](https://github.com/kulkarniamit/openssl-evp-demo/blob/master/openssl_evp_demo.c) - openssl part  
 Yoann Sculo : [link](http://www.yoannsculo.fr/faire-un-hash-md5-dun-string-en-c/) - md5sum part  
 alk : [link](https://stackoverflow.com/questions/17984628/switch-statement-using-string-on-an-array) - switch statement part  
