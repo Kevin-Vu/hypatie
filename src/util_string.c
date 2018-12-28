@@ -11,7 +11,6 @@ char* randomString(char charset[], size_t size)
 /* ----------------------------------------- */
 {
     srand(time(NULL));
-    sprintf(buf, "%s", charset);
     size_t n = 0;
     char * str = malloc(size * sizeof(char) + 1);
     size++;
