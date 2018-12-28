@@ -16,7 +16,7 @@ C_INC_FLAGS = -I$(INC_PATH)
 
 CFLAGS = $(C_CC_FLAGS) $(C_OPTIMISATION_FLAGS) $(C_OPENSSL_FLAGS) $(C_INC_FLAGS) 
 
-PRODUCT	= free_dashlane.exe
+PRODUCT	= hypatie.exe
 
 SRC = $(addprefix ${SRC_PATH}/, $(FILE))
 OBJ = $(addprefix ${OBJ_PATH}/, $(addsuffix .o, $(basename $(FILE))))
