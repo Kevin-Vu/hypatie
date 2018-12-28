@@ -203,8 +203,11 @@ char * md5_hash_from_file(const char * filename)
     {
         MD5_Update(&c, buf, bytes);
         bytes=read(filedes, buf, BUFSIZE);
-        if(bytes == -1 || bytes != sizeof len)
+        if(bytes == -1 || bytes != BUFSIZE)
+        {   
+            fclose(filedes);
             return NULL;
+        }
     }
 
     MD5_Final(md5, &c);
