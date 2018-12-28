@@ -24,7 +24,7 @@ Go to the `exe` folder.
 ./hypatie.exe <args>
 ```
 Here are the arguments you can pass through the program :
-```
+```txt
 new simple|special <length>    # generate a random password
 read                           # print a password
 add                            # add a new password
