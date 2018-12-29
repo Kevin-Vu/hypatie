@@ -25,7 +25,7 @@ Go to the `exe` folder.
 ```
 Here are the arguments you can pass through the program :
 ```txt
-new simple|special <length>    # generate a random password : alphanum with or without special characters
+new simple|special <length>    # generate a random password alphanum with/without special characters
 read                           # print a password
 add                            # add a new password
 rm                             # remove a password
