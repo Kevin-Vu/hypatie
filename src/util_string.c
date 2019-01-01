@@ -45,4 +45,17 @@ int cstrlen(char * str)
     while((c = *str++)) ctr++;
     return ctr;
 }
+/* ----------------------- */
+int containSpaces(char * str)
+/* ----------------------- */
+{
+    char * save = str;
+    while(*save)
+    {
+        if(*save == ' ')
+            return 1;
+        save++;
+    }
+    return 0;
+}
 

@@ -59,15 +59,15 @@ void retrieveInput(char * input, char * message)
     fprintf(stdout, "%s", message);
     if(fgets(input, BUFFERSIZE, stdin) != NULL)
     {
-        if(strcmp(input, "\n") == 0){
-            puts("You have entered an empty input. It will be replaced by '(null)'");
+        if(strcmp(input, "\n") == 0 || containSpaces(input)){
+            puts("ERROR: You have entered an empty input or an input with spaces.");
             strcpy(input, "(null)");
         }
         else
             input[strcspn(input, "\n")] = 0;
     }
     else
-        input = NULL;
+        input = "(null)";
 }
 /* --------------------------------------------------------------------------------------------------------- */
 void encryptSTORE_FILE(P_PROP * p, int length, char * key, char * iv, int doexit)
