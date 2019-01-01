@@ -58,7 +58,14 @@ void retrieveInput(char * input, char * message)
 {
     fprintf(stdout, "%s", message);
     if(fgets(input, BUFFERSIZE, stdin) != NULL)
-        input[strcspn(input, "\n")] = 0;
+    {
+        if(strcmp(input, "\n") == 0){
+            puts("You have entered an empty input. It will be replaced by '(null)'");
+            strcpy(input, "(null)");
+        }
+        else
+            input[strcspn(input, "\n")] = 0;
+    }
     else
         input = NULL;
 }
@@ -76,11 +83,11 @@ void encryptSTORE_FILE(P_PROP * p, int length, char * key, char * iv, int doexit
 void displayArray(P_PROP * p, int length)
 /* --------------------------------------------------------------------------------------------------------- */
 {
-    puts("+---------------------------+---------------------------+--------+");
-    printf("| %-25.25s | %-25.25s | %s |\n", "ID", "account", "number");
-    puts("+---------------------------+---------------------------+--------+");
+    puts("+---------------------------+--------------------------------+--------+");
+    printf("| %-25.25s | %-30.30s | %s |\n", "ID", "account", "number");
+    puts("+---------------------------+--------------------------------+--------+");
     displayKeyP_PROP(p, length);
-    puts("+---------------------------+---------------------------+--------+");
+    puts("+---------------------------+--------------------------------+--------+");
 }
 /* --------------------------------------------------------------------------------------------------------- */
 void printPassword(P_PROP * p, int length)
@@ -193,7 +200,7 @@ void action(int command)
 {
     char master[BUFFERSIZE];
     /* cli master password */
-    retrieveInput(master, "Enter the new master password : ");
+    retrieveInput(master, "Enter the master password : ");
 
     /* generate key and init vect from master */
     char * key = sha256_hash_from_string(master);

@@ -21,8 +21,7 @@ void free_P_PROParray(P_PROP * p, int n)
 P_PROP * file_to_P_PROParray(char const * filename)
 /* --------------------------------------------- */
 {
-    char * token = NULL;
-    char * line  = NULL;
+    char * line = NULL;
     size_t len   = 0;
 
     int nbLine = countLine(filename);
@@ -34,16 +33,12 @@ P_PROP * file_to_P_PROParray(char const * filename)
         free_P_PROParray(p, nbLine);
         return NULL;
     }
+
     int i = 0;
-    while (getline(&line, &len, fp) != -1) {
-        token = strtok(line, " ");
-        strcpy(p[i] -> key, token);
-        token = strtok(NULL, " ");
-        strcpy(p[i] -> value , token);
-        token = strtok(NULL, " ");
-        token[strcspn(token, "\n")] = '\0';
-        strcpy(p[i] -> email , token);
-        i++;
+    for(i = 0; i < nbLine; i++)
+    {
+        if(getline(&line, &len, fp) != -1)
+            sscanf(line, "%s %s %s",p[i] -> key, p[i] -> value, p[i] -> email);
     }
     free(line);
     fclose(fp);
@@ -57,8 +52,8 @@ P_CONT getContent(P_PROP *p, int length, int lno)
     if(lno > length - 1 || lno < 0 || length == 0)
         return NULL;
     P_CONT cont = malloc(sizeof(CONT));
-    strcpy(cont -> value , p[lno] -> value);
-    strcpy(cont -> email , p[lno] -> email);
+    sscanf(p[lno] -> value, "%s", cont -> value);
+    sscanf(p[lno] -> email, "%s", cont -> email);
     return cont;
 }
 /* ------------------------------------ */
@@ -76,5 +71,14 @@ void displayKeyP_PROP(P_PROP * p, int l)
 {
     int i = 0;
     for(i = 0; i < l; i++) 
-        printf("| %-25.25s | %-25.25s | [%3d]  |\n", p[i] -> key, p[i] -> email, i);
+    {
+        if(strlen(p[i] -> email) > 30 && strlen(p[i] -> key) > 30)
+            printf("| %-22.22s... | %-27.27s... | [%3d]  |\n", p[i] -> key, p[i] -> email, i);
+        else if(strlen(p[i] -> email) > 30 && strlen(p[i] -> key) <= 30)
+            printf("| %-25.25s | %-27.27s... | [%3d]  |\n", p[i] -> key, p[i] -> email, i);
+        else if(strlen(p[i] -> email) <=30 && strlen(p[i] -> key) > 30)
+            printf("| %-22.22s... | %-30.30s... | [%3d]  |\n", p[i] -> key, p[i] -> email, i);
+        else
+            printf("| %-25.25s | %-30.30s | [%3d]  |\n", p[i] -> key, p[i] -> email, i);
+    }
 }
