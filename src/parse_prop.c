@@ -72,11 +72,11 @@ void displayKeyP_PROP(P_PROP * p, int l)
     int i = 0;
     for(i = 0; i < l; i++) 
     {
-        if(strlen(p[i] -> email) > 30 && strlen(p[i] -> key) > 30)
+        if(cstrlen(p[i] -> email) > 30 && cstrlen(p[i] -> key) > 30)
             printf("| %-22.22s... | %-27.27s... | [%3d]  |\n", p[i] -> key, p[i] -> email, i);
-        else if(strlen(p[i] -> email) > 30 && strlen(p[i] -> key) <= 30)
+        else if(cstrlen(p[i] -> email) > 30 && cstrlen(p[i] -> key) <= 30)
             printf("| %-25.25s | %-27.27s... | [%3d]  |\n", p[i] -> key, p[i] -> email, i);
-        else if(strlen(p[i] -> email) <=30 && strlen(p[i] -> key) > 30)
+        else if(cstrlen(p[i] -> email) <=30 && cstrlen(p[i] -> key) > 30)
             printf("| %-22.22s... | %-30.30s... | [%3d]  |\n", p[i] -> key, p[i] -> email, i);
         else
             printf("| %-25.25s | %-30.30s | [%3d]  |\n", p[i] -> key, p[i] -> email, i);
