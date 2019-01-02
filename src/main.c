@@ -9,7 +9,7 @@ int main(int argc, const char * argv[])
         verifyNbArg(argc, 4);
         printNewPassword(argv[2], argv[3]);
     }
-    else if(command > FIRST_CMD && command < LAST_CMD)
+    else if(command > FIRST_CMD && command < LAST_CMD && command != HELP)
     {
         verifyNbArg(argc, 2);
         action(command);
