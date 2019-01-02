@@ -31,6 +31,7 @@ add                            # add a new password
 rm                             # remove a password
 replace                        # replace a password by a new one
 passwd                         # change the master password
+help                           # print the usage
 ```
 
 ## Memory leak verification
