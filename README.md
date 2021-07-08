@@ -2,7 +2,7 @@
 ## Personal password encryptor
 This project aims to secure all your personal passwords in one single app, and access them with a unique password.
 
-[![Build Status](https://travis-ci.com/Kevin-Vu/hypatie.svg?branch=master)](https://travis-ci.com/Kevin-Vu/hypatie) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0dc6388459214bddbd4b39dd3b103d90)](https://www.codacy.com/app/Kevin-Vu/hypatie?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Kevin-Vu/hypatie&amp;utm_campaign=Badge_Grade) ![Version](https://img.shields.io/badge/hypatie-v1.0-blue.svg)
+[![Build Status](https://travis-ci.com/Kevin-Vu/hypatie.svg?branch=master)](https://travis-ci.com/Kevin-Vu/hypatie) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e73b2a29e1f543318f6baa8e4fd03bbf)](https://www.codacy.com/gh/Kevin-Vu/hypatie/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Kevin-Vu/hypatie&amp;utm_campaign=Badge_Grade) ![Version](https://img.shields.io/badge/hypatie-v1.0-blue.svg)
 
 ----
 
