@@ -35,8 +35,7 @@ help                           # print the usage
 ```
 
 ## Memory leak verification
-Actually there is no memory leak found.   
-Tool used : **Valgrind**.
+No memory leak found : **Valgrind**.
 
 ## Sources
 Here are the source used in this project :  
